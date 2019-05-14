@@ -3,6 +3,12 @@ function calculateTip() {
   var serviceQual = document.getElementById("serviceQual").value;
   var numOfPeople = document.getElementById("peopleamt").value;
 
+  //validate input
+  if (billAmt === "" || serviceQual == 0) {
+    alert("Please enter values");
+    return;
+  }
+  
   //Calculate tip
   var total = (billAmt * serviceQual) / numOfPeople;
   //round to two decimal places
